@@ -1,0 +1,33 @@
+.divStyle {
+  border: 1px solid black;
+}
+.firstDiv{
+    border: 1px solid black;
+
+}
+.secondDiv{
+    border: 1px solid black;
+    float: left;
+
+}
+.centerAllign{
+    border: 1px solid black;
+    
+}
+.textGroup{
+    margin: 0px;
+    text-align: center
+}
+label{
+    // display: inline-block;
+    margin-bottom: .5rem;
+    margin-top: .5rem;
+    display: block;
+    text-align: center;
+    line-height: 150%;
+    font-size: .85em;
+}
+.btnColor{
+    background-color: #17a2b8;
+    border: 1px solid darkslategray;
+}

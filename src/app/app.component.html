@@ -1,0 +1,52 @@
+<div class="container divStyle">
+<div class="col-lg-12">
+  <h2>Flight Search Engine</h2>  
+</div>
+
+<div class="row">
+<div class="col-lg-4 firstDiv">
+  <!--switch tab-->
+ <div class="btn-group" role="group" >
+  <button type="button" class="btn active" [ngClass]="{'btnColor':!showReturn}" (click)="oneWayData()">One way</button>
+  <button type="button" class="btn" [ngClass]="{'btnColor':showReturn && !showOneway}" (click)="returnData()">Return</button>
+ </div>
+  <div *ngIf="!showReturn" class="centerAllign">
+    <form [formGroup]="profileForm" >
+  <label>
+    <input type="text" formControlName="originCity" placeholder="Enter Origin City">
+  </label>
+  <label>
+    <input type="text" formControlName="destinationCity" placeholder="Enter Destination City">
+  </label>
+  <label>
+     <input type='text' class="form-control" />
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+  </label>
+  </form>
+
+  </div>
+  <div *ngIf="showReturn && !showOneway" class="firstDiv">
+  <form [formGroup]="profileForm">
+  
+  <label>
+    First :
+    <input type="text" formControlName="firstName">
+  </label>
+
+  <label>
+    Last :
+    <input type="text" formControlName="lastName">
+  </label>
+
+</form>
+
+  </div>
+  <!--end switch-->
+  
+</div>
+<div class="col-lg-8 secondDiv">
+</div>
+</div>
+</div>
